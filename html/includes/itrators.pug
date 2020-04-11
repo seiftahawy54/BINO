@@ -1,0 +1,56 @@
+//- Navigation Bar Items
+
+mixin navItems(feat, sectionName, linkAc)    
+    li(class="navbar-item " + linkAc, data-section=sectionName)
+        a(href="#" class="nav-link whiteColor") #{feat}
+
+//- Features Items
+
+mixin featItem(icon, title)
+    div(class="custom-border")
+        i(class=icon)
+    h4(class="font-weight-normal text-uppercase mainGrayColor") #{title}
+    hr(class="specified-hr mainGrayBackColor")
+    p(class="mainGrayColor") Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+
+//- Our Services
+
+mixin service(headText, serIcon)
+    div(class="service")
+        i(class="d-block text-center " + serIcon)
+        h5(class="mainRedColor text-uppercase") #{headText}
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ip sum has been the industry's standard dummy text ever.
+
+//- Statistics Icons
+
+mixin stat(statIcon, number, statText)
+    div(class="stat text-center")
+        i(class=statIcon)
+        h5 #{number}
+        p #{statText}
+
+//- Pricing Plans
+
+mixin price-plan(plan_head, plan_price, active)
+    div(class="plans text-center " + active)
+        div(class="price")
+            h2(class='text-uppercase') #{plan_head}
+            div(class="main-panner")
+                h3(class="font-weight-bold") #{plan_price}
+                p per month
+        div(class="plan-features")
+            p Competition Analysis Methods
+            p All Ranked URLs
+            p International Support System
+            p Social Media Tracing
+        button(class="btn btn-danger text-uppercase") choose plan
+
+//- Our Team
+
+mixin teamMem(member_img, member_name, member_role)
+    div(class="team-members text-center")
+        img(src="../imgs/our team/theteam/" + member_img, alt=member_name)/
+        div(class="team-text")
+            span(class="vertical-line d-block")
+            h5 #{member_name}
+            p #{member_role}

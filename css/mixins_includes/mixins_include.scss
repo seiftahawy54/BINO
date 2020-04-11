@@ -1,0 +1,32 @@
+// Transition MIXIN
+
+@mixin transitionMix($time) {
+    -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -ms-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+}
+
+// Background Size MIXIN
+
+@mixin bkgSize($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -ms-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+// Border MIXIN
+
+@mixin myborder($color) {
+    border: 1px solid $color;
+}
+
+// Red Sided Border
+
+@mixin redSided($side) {
+    border-#{$side}: 5px solid $mainRed;
+    padding-#{$side}: 30px;
+}

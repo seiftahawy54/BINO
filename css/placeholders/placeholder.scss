@@ -1,0 +1,94 @@
+// Chevrons Mixins
+
+%chevrons {
+    display: block;
+    background-color: #706b65;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+    border-radius: 5px;
+    color: #CCC;
+    @include transitionMix(0.25s);
+}
+
+%chevrons_hover {
+    background-color: $mainRed;
+    color: $whiteColor;
+}
+
+// Line Shape Class
+
+.line-shape {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    margin: auto;
+    background-color: $mainRed;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+.line-shape:after {
+    content: '';
+    position: absolute;
+    width: 91px;
+    height: 1.5px;
+    left: 15px;
+    top: 1px;
+    background-color: #CCC;
+}
+
+.line-shape:before {
+    content: '';
+    position: absolute;
+    width: 91px;
+    height: 1.5px;
+    right: 15px;
+    top: 1px;
+    background-color: #CCC;
+}
+
+// Specified Horizontal Line
+
+.specified-hr {
+    width: 30%;
+    margin-left: auto;
+    height: 0.9px;
+}
+
+// Main Paragraph
+
+%mainP {
+    margin: auto;
+    color: #a5a6a6;
+    margin: 30px 0;
+}
+
+// After And Before Border
+
+.tri-border { position: relative; }
+
+.tri-border::after {
+    content: '';
+    position: absolute;
+    border-color: transparent $mainRed transparent transparent;
+    border-width: 25px;
+    border-style: solid;
+    top: calc(20% - 15px);
+    left: -50px;
+}
+
+.right-tri-border { position: relative; }
+
+.right-tri-border::before {
+    content: '';
+    position: absolute;
+    border-color: transparent transparent transparent $mainRed;
+    border-width: 25px;
+    border-style: solid;
+    top: calc(20% - 15px);
+    right: -50px;
+    z-index: 1;
+}
